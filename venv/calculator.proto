@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+message SumRequest {
+  double a = 1;
+  double b = 2;
+}
+
+message SumReply {
+  double s = 1;
+}
+
+message MultiplyRequest {
+  double a = 1;
+  double b = 2;
+}
+
+message MultiplyReply {
+  double s = 1;
+}
+
+message LargestRequest {
+  double a = 1;
+  double b = 2;
+  double c = 3;
+}
+
+message LargestReply {
+  double s = 1;
+}
+
+message DivisionRequest {
+  double a = 1;
+  double b = 2;
+}
+
+message DivisionReply {
+  double s = 1;
+  double s1 = 2;
+}
+
+service Calculator {
+  rpc Sum (SumRequest) returns (SumReply);
+  rpc Multiply (MultiplyRequest) returns (MultiplyReply);
+  rpc Largest (LargestRequest) returns (LargestReply);
+  rpc Division (DivisionRequest) returns (DivisionReply);
+
+}
